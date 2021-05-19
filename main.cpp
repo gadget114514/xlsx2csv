@@ -22,12 +22,14 @@ void dump(std::string s, xlnt::worksheet &sheet)
   std::string fn = s + ".csv";
   std::ofstream outfile (fn);
 
+   std::clog << fn << "\n";
+  
   for (auto row : sheet.rows(false)) 
     { 
       for (auto cell : row) 
 	{
 	  xlnt::column_t::index_t i = cell.column_index();
-	  printf("%d:%ld\n", i, row.length() 	  );
+	  //	  printf("%d:%ld\n", i, row.length() 	  );
 	  
 	  printcell(outfile, cell.to_string());
 
@@ -39,7 +41,6 @@ void dump(std::string s, xlnt::worksheet &sheet)
     }
 
   outfile.close();
-   std::clog << s << "\n";
 }
 
 
