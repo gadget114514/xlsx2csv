@@ -12,5 +12,5 @@ Simple xlsx to csv converter.
    % xlsx2csv filename.xlsx
 ```
 
-The results are created as csv files which name comes from sheet name.
+The results are created as csv files which name comes from sheet name. (sheetname.csv)
 
