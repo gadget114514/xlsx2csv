@@ -7,7 +7,7 @@ void printcell(std::ofstream &outfile, std::string s)
   int nondigit = 0;
   for (int i = 0; i < s.length(); i++) {
     char c = s[i];
-    if ('0' <= c && c <= '9') ;
+    if ('0' <= c && c <= '9' || (c == '.' && !nondigit)) ;
     else nondigit = 1;
   }
   if (nondigit) {
